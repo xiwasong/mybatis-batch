@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="batch">
+
+    <insert id="insertCountries" parameterType="java.util.List">
+        insert into country (countryname, countrycode)
+        values
+        <foreach collection="list" item="item" index="index" separator=",">
+            (#{item.name,jdbcType=VARCHAR},#{item.code,jdbcType=VARCHAR} )
+        </foreach>
+    </insert>
+
+    <update id="updateCountries" parameterType="java.util.List">
+        <foreach collection="list" item="item" index="index" separator=";">
+            UPDATE country
+            <set>
+              countryname=#{item.name,jdbcType=VARCHAR},countrycode=#{item.code,jdbcType=VARCHAR}
+            </set>
+            WHERE
+            countrycode=#{item.code,jdbcType=VARCHAR}
+        </foreach>
+    </update>
+
+    <delete id="deleteCountries" parameterType="java.util.List">
+        <foreach collection="list" item="item" index="index" separator=";">
+            DELETE FROM country
+            WHERE
+            countrycode=#{item.code,jdbcType=VARCHAR}
+        </foreach>
+    </delete>
+
+</mapper>
