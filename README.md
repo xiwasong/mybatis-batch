@@ -1,6 +1,9 @@
 # mybatis-batch
 mybatis batch operate extension for srping
 
+github:[https://github.com/xiwasong/mybatis-batch](https://github.com/xiwasong/mybatis-batch)  
+oschina:[http://git.oschina.net/xiwa/mybatis-batch](http://git.oschina.net/xiwa/mybatis-batch)  
+
 # use guide
 ##### 1.set BatchSessionFactoryBuilder
 ```
