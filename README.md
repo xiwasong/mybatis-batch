@@ -1,5 +1,5 @@
 # mybatis-batch
-mybatis batch operate extension for srping
+mybatis batch operate extension for spring
 
 github:[https://github.com/xiwasong/mybatis-batch](https://github.com/xiwasong/mybatis-batch)  
 oschina:[http://git.oschina.net/xiwa/mybatis-batch](http://git.oschina.net/xiwa/mybatis-batch)  
